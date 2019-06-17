@@ -4,9 +4,9 @@
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="DarkGray">
+                 mc:Ignorable="d" WindowStyle="SingleBorderWindow"
+        Title="Дифференциалды теңдеудің жалпы шешімін табу" Height="450" Width="800">
+    <Grid Background="#FFA2C5CD">
         <Grid.RowDefinitions>
             <RowDefinition Height="38*"/>
             <RowDefinition Height="98*"/>
@@ -21,7 +21,7 @@
             <ColumnDefinition Width="230*"/>
             <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Дифференциалды теңдеу" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Дифференциалды теңдеу" VerticalContentAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" FontSize="16" FontWeight="Bold"/>
         <TextBox Grid.Column="1" Grid.Row="1" x:Name="Formula" AcceptsReturn="True" TextWrapping="Wrap" Text="DeX1+X2=COS([3+SIN(6)]*t)&#xD;&#xA;DeX2-X1=SIN([3+SIN(6)]*t)" Grid.ColumnSpan="3" Grid.RowSpan="1" />
 
         <Button Content="Жалпы шешімді табу" Grid.Column="2" Grid.Row="2" Click="Button_Click" FontWeight="Bold" Margin="10"/>
