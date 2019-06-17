@@ -19,6 +19,7 @@ namespace Program
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(string.IsNullOrEmpty(Formula.Text)) return;
             Viewer.Children.Clear();
             var formula = Formula.Text;
             var parsedFormula = new Formula(formula);
