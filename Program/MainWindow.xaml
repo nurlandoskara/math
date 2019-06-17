@@ -1,0 +1,35 @@
+﻿<mah:MetroWindow x:Class="Program.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="230*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Дифференциалды теңдеу" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" FontSize="16" FontWeight="Bold"/>
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="Formula" AcceptsReturn="True" TextWrapping="Wrap" Text="DeX1+X2=COS([3+SIN(6)]*t)&#xD;&#xA;DeX2-X1=SIN([3+SIN(6)]*t)" Grid.ColumnSpan="3" Grid.RowSpan="1" />
+
+        <Button Content="Жалпы шешімді табу" Grid.Column="2" Grid.Row="2" Click="Button_Click" FontWeight="Bold" Margin="10"/>
+        <ScrollViewer Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+            <StackPanel x:Name="Viewer" VerticalAlignment="Top">
+                <TextBlock Background="AliceBlue" TextWrapping="Wrap" Text="Шешімі" TextAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</mah:MetroWindow>
